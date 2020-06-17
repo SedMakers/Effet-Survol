@@ -9,9 +9,14 @@ window.addEventListener("load", function(){
                 hover.index = 0;
                 hover.interval = setInterval(function(){
                     if(hover.index < hover.originalText.lenght){
-
+                        var chars = ["@", "!", "#", "?"];
+                        hover.index++;
+                        var str = hover.originalText.substr(0,hover.index)
+                        + chars[ Math.floor(Math.random()*chars.length) ] 
+                        + hover.originalText.substr(hover.index+1);
+                        hover.node.innerText = str;
                     }else{
-                        
+
                     }
                 },50);
             }
