@@ -3,7 +3,14 @@ window.addEventListener("load", function(){
     var nodes = document.querySelectorAll(".sequenceRollover");
     nodes.forEach(function(item){
         item.addEventListener("mouseover", function(){
-            
+            if(hover.interval == null){
+                hover.node = this;
+                hover.originalText = this.innerText;
+                hover.index = 0;
+                hover.interval = setInterval(function(){
+
+                },50);
+            }
 
         });
     });
