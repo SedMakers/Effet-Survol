@@ -8,7 +8,11 @@ window.addEventListener("load", function(){
                 hover.originalText = this.innerText;
                 hover.index = 0;
                 hover.interval = setInterval(function(){
+                    if(hover.index < hover.originalText.lenght){
 
+                    }else{
+                        
+                    }
                 },50);
             }
 
