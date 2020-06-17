@@ -16,7 +16,11 @@ window.addEventListener("load", function(){
                         + hover.originalText.substr(hover.index+1);
                         hover.node.innerText = str;
                     }else{
-
+                        hover.node.innerText = hover.originalText;
+                        clearInterval(hover.interval)
+                        hover.node = null;
+                        hover.originalText = null;
+                        hover.interval = null;
                     }
                 },50);
             }
